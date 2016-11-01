@@ -8,3 +8,7 @@ def suggestions():
     		data = json.load(data_file)
         return jsonify(data)
 
+@app.route('/')
+def root():
+    return app.send_static_file('index.html')
+#    return 'Hello!'  
